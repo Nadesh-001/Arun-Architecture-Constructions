@@ -1124,6 +1124,12 @@
       text-transform: uppercase
     }
 
+    .g-badge-reel {
+      background: linear-gradient(135deg, rgba(131, 58, 180, 0.95), rgba(225, 48, 108, 0.95), rgba(253, 29, 29, 0.95));
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #fff;
+    }
+
     .g-play-btn {
       position: absolute;
       top: 50%;
@@ -1218,6 +1224,13 @@
       background: #000;
       box-shadow: 0 24px 70px rgba(0, 0, 0, .8);
       border: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .lb-video-container.reel-mode {
+      width: min(440px, 92vw);
+      height: min(640px, 78vh);
+      aspect-ratio: auto;
+      border-radius: 16px
     }
 
     .lb-video-container iframe {
@@ -1687,6 +1700,147 @@
     .ba-label.after {
       background: rgba(245, 184, 0, .92);
       color: #111
+    }
+
+    /* ============================================================
+   PARTNERSHIPS / VENDORS
+============================================================ */
+    .vendors-section {
+      background: var(--navy2);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0;
+    }
+
+    .vendors-section .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 38px;
+    }
+
+    .vendor-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .vendor-eyebrow::before,
+    .vendor-eyebrow::after {
+      content: '';
+      width: 28px;
+      height: 1.5px;
+      background: var(--gold);
+      opacity: 0.5;
+    }
+
+    .vendor-carousel-wrap {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 12px 0 24px;
+      mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+
+    .vendor-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: vendorRoll 32s linear infinite;
+      will-change: transform;
+    }
+
+    .vendor-carousel-wrap:hover .vendor-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes vendorRoll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .vendor-card {
+      flex: 0 0 220px;
+      width: 220px;
+      background: #111a26;
+      border: 1.5px solid rgba(255, 255, 255, 0.07);
+      border-radius: 18px;
+      padding: 34px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: var(--tr);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    .vendor-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(245, 184, 0, 0.08), transparent 70%);
+      opacity: 0;
+      transition: opacity var(--tr);
+      pointer-events: none;
+    }
+
+    .vendor-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(245, 184, 0, 0.4);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 24px rgba(245, 184, 0, 0.14);
+      background: #152232;
+    }
+
+    .vendor-card:hover::before {
+      opacity: 1;
+    }
+
+    .vendor-brand {
+      font-family: Manrope, Inter, sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #e2e8f0;
+      margin: 0;
+      line-height: 1.2;
+      transition: color var(--tr);
+    }
+
+    .vendor-card:hover .vendor-brand {
+      color: #fff;
+    }
+
+    .vendor-cat {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 680px) {
+      .vendor-card {
+        flex: 0 0 185px;
+        width: 185px;
+        padding: 28px 16px;
+      }
+      .vendor-brand {
+        font-size: 17px;
+      }
     }
 
     /* ============================================================

@@ -43,6 +43,7 @@
         iframeEl.src = 'https://www.youtube.com/embed/' + item.videoId + '?autoplay=1&rel=0&playsinline=1';
         if (ytLink) {
           ytLink.href = 'https://www.youtube.com/watch?v=' + item.videoId;
+          ytLink.innerHTML = 'WATCH ON YOUTUBE <svg class="icon-svg arrow-icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>';
           ytLink.style.display = 'inline-flex';
         }
       } else {
@@ -68,6 +69,8 @@
       document.getElementById('lightbox').classList.remove('open');
       const iframeEl = document.getElementById('lbIframe');
       if (iframeEl) iframeEl.src = '';
+      const videoWrap = document.getElementById('lbVideoWrap');
+      if (videoWrap) videoWrap.classList.remove('reel-mode');
       const imgEl = document.getElementById('lbImg');
       if (imgEl) imgEl.src = '';
       const ytLink = document.getElementById('lbYtLink');
@@ -204,4 +207,9 @@
       const text = `Hello ARUN Architecture %26 Constructions,%0A%0AName: ${encodeURIComponent(v('name'))}%0APhone: ${encodeURIComponent(v('phone'))}%0AEmail: ${encodeURIComponent(v('email'))}%0AProject Type: ${encodeURIComponent(v('type'))}%0ALocation: ${encodeURIComponent(v('location'))}%0AProject Details: ${encodeURIComponent(v('message'))}`;
       window.open(`https://wa.me/916374698498?text=${text}`, '_blank');
     }
-  
+
+    /* ------ VENDOR CAROUSEL INFINITE SEAMLESS LOOP ------ */
+    const vendorTrack = document.querySelector('.vendor-track');
+    if (vendorTrack && vendorTrack.children.length) {
+      vendorTrack.innerHTML += vendorTrack.innerHTML;
+    }
