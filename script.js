@@ -47,31 +47,28 @@ const lbImages = [
     src: 'assets/signature_villa.jpg',
     cap: 'Signature Villa Design — Nagercoil'
   },
-
   {
     type: 'video',
     videoId: 'hxAc-3PQRos',
+    si: 'kihhljDl2MKSJcPI',
     cap: '1.8 Cent Contemporary House (G+1) — Parakkai, Nagercoil'
   },
-
   {
     type: 'image',
     src: 'assets/architectural-designs-500x500.webp',
     cap: 'Residential Architectural Design — Planning'
   },
-
   {
     type: 'video',
-    videoId: 'UfWdqGujElY',
-    cap: 'ARUN Architecture & Constructions — Construction & Design Showcase'
+    videoId: 'lVvrBCCuJqw',
+    si: 'ZgWq9cyGPwL3RaQc',
+    cap: 'ARUN Architecture & Constructions — Construction Showcase'
   },
-
   {
     type: 'image',
     src: 'assets/building-construction-500x500.webp',
     cap: 'Home Construction — Parakkai'
   },
-
   {
     type: 'image',
     src: 'assets/interior-designers-500x500.webp',
@@ -86,42 +83,23 @@ let lbCurrent = 0;
    YOUTUBE EMBED URL
    ========================================================= */
 
-function getYouTubeEmbedUrl(videoId, autoplay = false) {
-
+function getYouTubeEmbedUrl(videoId, autoplay = false, si = '') {
   if (!videoId || typeof videoId !== 'string') {
     return '';
   }
 
   const cleanId = videoId.trim();
-
   if (!cleanId) {
     return '';
   }
 
   const params = new URLSearchParams();
-
-  /* Prevent unrelated recommended videos */
+  if (si) {
+    params.set('si', si);
+  }
   params.set('rel', '0');
-
-  /* Better mobile inline playback */
   params.set('playsinline', '1');
 
-  /*
-   * YouTube Error 153 prevention:
-   * Tell YouTube which website is embedding the video.
-   */
-  if (
-    window.location.protocol === 'https:' &&
-    window.location.origin &&
-    window.location.origin !== 'null'
-  ) {
-    params.set('origin', window.location.origin);
-  }
-
-  /*
-   * Autoplay is OFF by default.
-   * Only enable it when explicitly requested.
-   */
   if (autoplay === true) {
     params.set('autoplay', '1');
   }
@@ -200,7 +178,7 @@ function updateLightboxContent() {
      * This avoids browser autoplay restrictions
      * and unnecessary YouTube loading.
      */
-    iframeEl.src = getYouTubeEmbedUrl(item.videoId, false);
+    iframeEl.src = getYouTubeEmbedUrl(item.videoId, false, item.si || '');
 
     iframeEl.title = item.cap || 'ARUN Architecture & Constructions Video';
 
