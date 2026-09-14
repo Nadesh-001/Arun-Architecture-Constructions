@@ -54,21 +54,20 @@ const lbImages = [
     cap: '1.8 Cent Contemporary House (G+1) — Parakkai, Nagercoil'
   },
   {
-    type: 'video',
-    videoId: 'lVvrBCCuJqw',
-    si: 'ZgWq9cyGPwL3RaQc',
-    cap: 'Modern House Architecture & Construction Tour — ARUN'
+    type: 'image',
+    src: 'assets/architectural-designs-500x500.webp',
+    cap: 'Residential Architectural Design — Planning'
   },
   {
     type: 'video',
     videoId: 'UfWdqGujElY',
-    si: 'VHoyf9TOrldcOlJn',
+    si: 'D6-29PhZ0_BP1XFD',
     cap: 'ARUN Architecture & Constructions — Construction & Design Showcase'
   },
   {
     type: 'image',
-    src: 'assets/architectural-designs-500x500.webp',
-    cap: 'Residential Architectural Design — Planning'
+    src: 'assets/building-construction-500x500.webp',
+    cap: 'Home Construction — Parakkai'
   },
   {
     type: 'image',
