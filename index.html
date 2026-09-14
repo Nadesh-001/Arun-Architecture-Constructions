@@ -131,19 +131,72 @@
   <!-- ==================== MOBILE OVERLAY ==================== -->
   <div class="mob-overlay" id="mobOverlay" onclick="closeMenu()"></div>
   <div class="mob-drawer" id="mobDrawer">
-    <a href="#home" onclick="closeMenu()">HOME</a>
-    <a href="#about" onclick="closeMenu()">ABOUT</a>
-    <a href="#services" onclick="closeMenu()">SERVICES</a>
-    <a href="#gallery" onclick="closeMenu()">GALLERY</a>
-    <a href="#projects" onclick="closeMenu()">PROJECTS</a>
-    <a href="#testimonials" onclick="closeMenu()">TESTIMONIALS</a>
-    <a href="#process" onclick="closeMenu()">OUR PROCESS</a>
-    <a href="#contact" onclick="closeMenu()">CONTACT</a>
-    <div class="drawer-cta">
-      <a class="btn btn-gold" href="#contact" onclick="closeMenu()">GET A QUOTE <svg class="icon-svg arrow-icon"
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <span class="drawer-brand-name">ARUN Architecture</span>
+        <span class="drawer-brand-sub">Constructions &amp; Interiors</span>
+      </div>
+      <button class="drawer-close" onclick="closeMenu()" aria-label="Close menu">
+        <svg class="icon-svg" aria-hidden="true">
+          <use href="#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile Navigation">
+      <a class="drawer-link" href="#home" onclick="closeMenu()"><span>HOME</span><svg class="icon-svg"
           aria-hidden="true">
           <use href="#icon-arrow"></use>
         </svg></a>
+      <a class="drawer-link" href="#about" onclick="closeMenu()"><span>ABOUT</span><svg class="icon-svg"
+          aria-hidden="true">
+          <use href="#icon-arrow"></use>
+        </svg></a>
+      <a class="drawer-link" href="#services" onclick="closeMenu()"><span>SERVICES</span><svg class="icon-svg"
+          aria-hidden="true">
+          <use href="#icon-arrow"></use>
+        </svg></a>
+      <a class="drawer-link" href="#gallery" onclick="closeMenu()"><span>GALLERY</span><svg class="icon-svg"
+          aria-hidden="true">
+          <use href="#icon-arrow"></use>
+        </svg></a>
+      <a class="drawer-link" href="#projects" onclick="closeMenu()"><span>PROJECTS</span><svg class="icon-svg"
+          aria-hidden="true">
+          <use href="#icon-arrow"></use>
+        </svg></a>
+      <a class="drawer-link" href="#testimonials" onclick="closeMenu()"><span>TESTIMONIALS</span><svg class="icon-svg"
+          aria-hidden="true">
+          <use href="#icon-arrow"></use>
+        </svg></a>
+      <a class="drawer-link" href="#process" onclick="closeMenu()"><span>OUR PROCESS</span><svg class="icon-svg"
+          aria-hidden="true">
+          <use href="#icon-arrow"></use>
+        </svg></a>
+      <a class="drawer-link" href="#contact" onclick="closeMenu()"><span>CONTACT</span><svg class="icon-svg"
+          aria-hidden="true">
+          <use href="#icon-arrow"></use>
+        </svg></a>
+    </nav>
+    <div class="drawer-footer">
+      <a class="btn btn-gold drawer-cta-btn" href="#contact" onclick="closeMenu()">
+        GET A QUOTE
+        <svg class="icon-svg arrow-icon" aria-hidden="true">
+          <use href="#icon-arrow"></use>
+        </svg>
+      </a>
+      <div class="drawer-contact-info">
+        <a href="tel:+916374698498" class="drawer-contact-item">
+          <svg class="icon-svg" aria-hidden="true">
+            <use href="#icon-phone"></use>
+          </svg>
+          <span>+91 63746 98498</span>
+        </a>
+        <a href="mailto:arunarchitect4u@gmail.com" class="drawer-contact-item">
+          <svg class="icon-svg" aria-hidden="true">
+            <use href="#icon-mail"></use>
+          </svg>
+          <span>arunarchitect4u@gmail.com</span>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -163,6 +216,7 @@
         <img id="lbImg" src="" alt="">
         <div class="lb-video-container" id="lbVideoWrap" style="display:none">
           <iframe id="lbIframe" src="" title="ARUN Architecture Video" frameborder="0"
+            referrerpolicy="strict-origin-when-cross-origin"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
@@ -211,24 +265,38 @@
 
     <!-- ==================== HERO ==================== -->
     <section id="home" class="hero">
-      <div class="hero-content">
-        <div class="eyebrow" style="margin-bottom:16px">Architecture • Construction • Interiors</div>
-        <h1>WE DESIGN SPACES.<br>WE BUILD <span>DREAMS.</span></h1>
-        <p>From architectural planning to construction, interiors and renovation, ARUN Architecture & Constructions
-          turns ideas into thoughtfully designed spaces built with quality, precision and care.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="#contact">START YOUR PROJECT <svg class="icon-svg arrow-icon"
-              aria-hidden="true">
-              <use href="#icon-arrow"></use>
-            </svg></a>
-          <a class="btn btn-dark" href="#gallery">VIEW OUR WORK <svg class="icon-svg arrow-icon" aria-hidden="true">
-              <use href="#icon-arrow"></use>
-            </svg></a>
+      <div class="hero-layout">
+        <div class="hero-content">
+          <div class="eyebrow" style="margin-bottom:16px">Architecture • Construction • Interiors</div>
+          <h1>WE DESIGN SPACES.<br>WE BUILD <span>DREAMS.</span></h1>
+          <p>From architectural planning to construction, interiors and renovation, ARUN Architecture &amp;
+            Constructions
+            turns ideas into thoughtfully designed spaces built with quality, precision and care.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#contact">START YOUR PROJECT <svg class="icon-svg arrow-icon"
+                aria-hidden="true">
+                <use href="#icon-arrow"></use>
+              </svg></a>
+            <a class="btn btn-dark" href="#gallery">VIEW OUR WORK <svg class="icon-svg arrow-icon" aria-hidden="true">
+                <use href="#icon-arrow"></use>
+              </svg></a>
+          </div>
+          <div class="trustline">
+            <span>Residential</span><span>Architecture</span><span>Construction</span><span>Interior
+              Design</span><span>Renovation</span>
+          </div>
         </div>
-        <div class="trustline">
-          <span>Residential</span><span>Architecture</span><span>Construction</span><span>Interior
-            Design</span><span>Renovation</span>
-        </div>
+
+        <!-- ==================== PROMOTIONAL POSTER PANEL ==================== -->
+        <aside class="hero-promo-panel" aria-label="Promotional Announcement">
+          <div class="hero-promo-tagline">
+            <span>BUILDING YOUR DREAM HOME, THE RIGHT WAY.</span>
+          </div>
+          <div class="hero-promo-card">
+            <img src="assets/promo_poster.png" alt="Arun Architecture &amp; Constructions promotional offer"
+              class="hero-promo-img" width="604" height="1024" loading="eager" decoding="async">
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -249,8 +317,8 @@
       <div class="container about-grid">
         <div class="about-visual" data-animate>
           <div class="about-img">
-            <img src="assets/471427032_1578245142807242_8924903744951973875_n.jpg"
-              alt="ARUN Architecture project — Nagercoil">
+            <img src="assets/company_poster.png"
+              alt="ARUN Architecture & Constructions — Er. P.S. Arun, Managing Director">
           </div>
           <div class="about-frame" aria-hidden="true"></div>
           <div class="about-portrait-card">
@@ -397,8 +465,7 @@
           <!-- Item 0: Image -->
           <div class="gallery-item" onclick="openLightbox(0)" role="button" tabindex="0"
             aria-label="View Signature Residence">
-            <img src="assets/471427032_1578245142807242_8924903744951973875_n.jpg"
-              alt="ARUN signature residential project">
+            <img src="assets/signature_villa.jpg" alt="ARUN signature residential project">
             <div class="g-overlay">
               <div class="g-overlay-content">
                 <h4>Signature Residence</h4>
@@ -531,7 +598,7 @@
             </div>
           </div>
           <div class="project" data-animate data-delay="4">
-            <img src="assets/471427032_1578245142807242_8924903744951973875_n.jpg" alt="ARUN signature project">
+            <img src="assets/signature_villa.jpg" alt="ARUN signature project">
             <div class="project-info">
               <div class="project-tag">SIGNATURE</div>
               <h3>Signature Home Project</h3>
@@ -542,167 +609,215 @@
       </div>
     </section>
 
-    <!-- ==================== TESTIMONIALS (NEW) ==================== -->
+    <!-- ==================== TESTIMONIALS ==================== -->
     <section id="testimonials" class="testimonials">
       <div class="container">
         <div class="section-head" data-animate>
           <div class="eyebrow">Client Stories</div>
           <h2>What Our Clients Say</h2>
-          <p>Real feedback from homeowners and clients who trusted ARUN Architecture & Constructions for their dream
+          <p>Real feedback from homeowners and clients who trusted ARUN Architecture &amp; Constructions for their dream
             projects.</p>
         </div>
-        <div class="t-carousel-wrap" data-animate>
-          <div class="t-track" id="tTrack">
-            <div class="t-card">
-              <div class="stars"><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg></div>
-              <p>"ARUN Architecture transformed our vision into a beautiful home. Er. Arun personally guided us through
-                every step, from design to handover. The quality of construction exceeded our expectations — every
-                detail was thoughtfully considered."</p>
-              <div class="t-author">
-                <div class="t-avatar">RK</div>
-                <div>
-                  <div class="t-name">Rajesh Kumar</div>
-                  <div class="t-detail">Home Construction • Nagercoil</div>
-                </div>
-              </div>
+
+        <!-- ==================== FEATURED PROJECT VIDEO ==================== -->
+        <div class="youtube-container" data-animate>
+          <iframe
+            src="https://www.youtube.com/embed/lVvrBCCuJqw?rel=0&playsinline=1"
+            title="ARUN Architecture & Constructions — Featured Project Video"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- ==================== 6 CLIENT TESTIMONIALS GRID ==================== -->
+        <div class="testimonials-grid" data-animate>
+          <!-- Testimonial 1 -->
+          <div class="t-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
             </div>
-            <div class="t-card">
-              <div class="stars"><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg></div>
-              <p>"The interior design team at ARUN is simply outstanding. They listened carefully to our requirements
-                and designed spaces that perfectly blend functionality with aesthetics. Our living room looks like it
-                belongs in a magazine!"</p>
-              <div class="t-author">
-                <div class="t-avatar">PS</div>
-                <div>
-                  <div class="t-name">Priya Suresh</div>
-                  <div class="t-detail">Interior Design • Kanyakumari</div>
-                </div>
-              </div>
-            </div>
-            <div class="t-card">
-              <div class="stars"><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg></div>
-              <p>"We hired ARUN for a complete renovation of our 20-year-old home. The transformation was incredible —
-                they modernized the entire space while staying within our budget. Truly professional and trustworthy
-                team."</p>
-              <div class="t-author">
-                <div class="t-avatar">MP</div>
-                <div>
-                  <div class="t-name">Murugan P.</div>
-                  <div class="t-detail">Renovation • Parakkai</div>
-                </div>
-              </div>
-            </div>
-            <div class="t-card">
-              <div class="stars"><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg></div>
-              <p>"The 3D elevation and 2D drawings provided by ARUN gave us a perfect understanding of our future home
-                before construction even began. The actual build matched the design exactly. Highly recommend their
-                planning services."</p>
-              <div class="t-author">
-                <div class="t-avatar">AS</div>
-                <div>
-                  <div class="t-name">Anitha Selvam</div>
-                  <div class="t-detail">Architectural Planning • Nagercoil</div>
-                </div>
-              </div>
-            </div>
-            <div class="t-card">
-              <div class="stars"><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg></div>
-              <p>"ARUN built our dream home on time and within budget — something I thought was impossible! Their
-                transparency about costs and timelines was refreshing. The finishing quality is exceptional and we
-                couldn't be happier."</p>
-              <div class="t-author">
-                <div class="t-avatar">KN</div>
-                <div>
-                  <div class="t-name">Karthik Nadar</div>
-                  <div class="t-detail">Home Construction • Colachel</div>
-                </div>
-              </div>
-            </div>
-            <div class="t-card">
-              <div class="stars"><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg><svg class="icon-svg" aria-hidden="true">
-                  <use href="#icon-star"></use>
-                </svg></div>
-              <p>"From the very first consultation, Er. Arun made us feel confident about our project. The team handled
-                every aspect professionally — architecture, permits, construction and furnishing. A truly end-to-end
-                experience."</p>
-              <div class="t-author">
-                <div class="t-avatar">DR</div>
-                <div>
-                  <div class="t-name">Deepa Rajan</div>
-                  <div class="t-detail">Full Build • Marthandam</div>
-                </div>
+            <p>"ARUN Architecture transformed our vision into a beautiful home. Er. Arun personally guided us through
+              every step, from design to handover. The quality of construction exceeded our expectations — every detail
+              was thoughtfully considered."</p>
+            <div class="t-author">
+              <div class="t-avatar">RK</div>
+              <div>
+                <div class="t-name">Rajesh Kumar</div>
+                <div class="t-detail">Home Construction • Nagercoil</div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="t-nav" data-animate>
-          <button class="t-btn" id="tPrev" onclick="tMove(-1)" aria-label="Previous testimonial"><svg class="icon-svg"
-              aria-hidden="true">
-              <use href="#icon-chevron-left"></use>
-            </svg></button>
-          <div class="t-dots" id="tDots"></div>
-          <button class="t-btn" id="tNext" onclick="tMove(1)" aria-label="Next testimonial"><svg class="icon-svg"
-              aria-hidden="true">
-              <use href="#icon-chevron-right"></use>
-            </svg></button>
+
+          <!-- Testimonial 2 -->
+          <div class="t-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+            </div>
+            <p>"The interior design team at ARUN is simply outstanding. They listened carefully to our requirements and
+              designed spaces that perfectly blend functionality with aesthetics. Our living room looks like it belongs
+              in a magazine!"</p>
+            <div class="t-author">
+              <div class="t-avatar">PS</div>
+              <div>
+                <div class="t-name">Priya Suresh</div>
+                <div class="t-detail">Interior Design • Kanyakumari</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="t-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+            </div>
+            <p>"We hired ARUN for a complete renovation of our 20-year-old home. The transformation was incredible —
+              they modernized the entire space while staying within our budget. Truly professional and trustworthy
+              team."</p>
+            <div class="t-author">
+              <div class="t-avatar">MP</div>
+              <div>
+                <div class="t-name">Murugan P.</div>
+                <div class="t-detail">Renovation • Parakkai</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="t-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+            </div>
+            <p>"The 3D elevation and 2D drawings provided by ARUN gave us a perfect understanding of our future home
+              before construction even began. The actual build matched the design exactly. Highly recommend their
+              planning services."</p>
+            <div class="t-author">
+              <div class="t-avatar">AS</div>
+              <div>
+                <div class="t-name">Anitha Selvam</div>
+                <div class="t-detail">Architectural Planning • Nagercoil</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="t-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+            </div>
+            <p>"ARUN built our dream home on time and within budget — something I thought was impossible! Their
+              transparency about costs and timelines was refreshing. The finishing quality is exceptional and we
+              couldn't be happier."</p>
+            <div class="t-author">
+              <div class="t-avatar">KN</div>
+              <div>
+                <div class="t-name">Karthik Nadar</div>
+                <div class="t-detail">Home Construction • Colachel</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="t-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-star"></use>
+              </svg>
+            </div>
+            <p>"From the very first consultation, Er. Arun made us feel confident about our project. The team handled
+              every aspect professionally — architecture, permits, construction and furnishing. A truly end-to-end
+              experience."</p>
+            <div class="t-author">
+              <div class="t-avatar">DR</div>
+              <div>
+                <div class="t-name">Deepa Rajan</div>
+                <div class="t-detail">Full Build • Marthandam</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -711,8 +826,8 @@
     <section>
       <div class="container feature-grid" data-animate>
         <div class="feature-img">
-          <img src="assets/471427032_1578245142807242_8924903744951973875_n.jpg"
-            alt="ARUN signature residential project">
+          <img src="assets/signature_villa.jpg"
+            alt="ARUN signature residential project — Proposed Villa designed by Er. Arun P.S">
         </div>
         <div class="feature-copy">
           <div class="eyebrow">Signature Approach</div>
@@ -971,11 +1086,34 @@
     <!-- ==================== CONTACT ==================== -->
     <section id="contact" class="contact">
       <div class="container contact-grid">
-        <div class="contact-left">
+        <div class="contact-left" data-animate>
+          <div class="contact-bg-visual" aria-hidden="true"></div>
           <div class="eyebrow">Let's Build Your Dream</div>
           <h2>Have a Project <span>in Mind?</span></h2>
-          <p>Tell us about your home, renovation, architectural or construction project. We'll help you take the next
-            step.</p>
+          <p class="contact-desc">Tell us about your home, renovation, architectural or construction project. We'll help
+            you take the next step.</p>
+
+          <div class="contact-trust-row">
+            <div class="trust-item">
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-check"></use>
+              </svg>
+              <span>Quality Construction</span>
+            </div>
+            <div class="trust-item">
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-check"></use>
+              </svg>
+              <span>Transparent Process</span>
+            </div>
+            <div class="trust-item">
+              <svg class="icon-svg" aria-hidden="true">
+                <use href="#icon-check"></use>
+              </svg>
+              <span>End-to-End Support</span>
+            </div>
+          </div>
+
           <div class="details">
             <div class="detail">
               <div class="d-icon"><svg class="icon-svg" aria-hidden="true">
@@ -1004,6 +1142,7 @@
               <div><strong>Business Hours</strong><span>9:00 AM – 8:00 PM, Monday – Saturday</span></div>
             </div>
           </div>
+
           <div class="map-wrap">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.7712395669926!2d77.4498953!3d8.1347776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f19e564d0f7d%3A0xdb27a1f92bd06293!2sArun%20Architecture%20%26%20Constructions!5e0!3m2!1sen!2sin!4v1724420000000!5m2!1sen!2sin"
@@ -1012,35 +1151,58 @@
             </iframe>
           </div>
         </div>
-        <form class="form" onsubmit="sendWhatsApp(event)">
-          <div style="margin-bottom:22px">
-            <h3 style="font-family:Manrope;font-size:20px;margin-bottom:6px">Send Us a Message</h3>
-            <p style="color:var(--muted);font-size:13px">We'll get back to you within a few hours via WhatsApp.</p>
+
+        <form class="form" onsubmit="sendWhatsApp(event)" data-animate data-delay="1">
+          <div class="form-header">
+            <h3>Start Your Project</h3>
+            <p>Share a few details about your project. Our team will connect with you via WhatsApp.</p>
           </div>
           <div class="form-grid">
-            <label>Name<input id="name" required placeholder="Your full name"></label>
-            <label>Phone<input id="phone" required placeholder="Your phone number"></label>
-            <label>Email<input id="email" type="email" placeholder="Your email address"></label>
+            <label>Name
+              <input id="name" required autocomplete="name" placeholder="Your full name">
+            </label>
+            <label>Phone
+              <input id="phone" type="tel" required autocomplete="tel" placeholder="Your phone number">
+            </label>
+
+            <label>Email
+              <input id="email" type="email" autocomplete="email" placeholder="Your email address">
+            </label>
             <label>Project Type
               <select id="type">
-                <option value="Home Construction">Home Construction</option>
-                <option value="Architectural Planning">Architectural Planning</option>
-                <option value="Interior Design">Interior Design</option>
+                <option value="Home Construction" selected>Home Construction</option>
+                <option value="Villa Construction">Villa Construction</option>
                 <option value="Renovation">Renovation</option>
-                <option value="3D Elevation">3D Elevation</option>
-                <option value="Temple Design">Temple Design</option>
-                <option value="Home Furnishing">Home Furnishing</option>
-                <option value="Consulting">Consulting</option>
+                <option value="Interior Design">Interior Design</option>
+                <option value="Commercial Construction">Commercial Construction</option>
+                <option value="Other">Other</option>
               </select>
             </label>
-            <label class="full">Location<input id="location" placeholder="Project city / area"></label>
-            <label class="full">Tell Us About Your Project<textarea id="message"
-                placeholder="Briefly describe your project, size, requirements..."></textarea></label>
+
+            <label>Location
+              <input id="location" placeholder="Project city / area">
+            </label>
+            <label>Approximate Budget
+              <select id="budget">
+                <option value="Below ₹25 Lakhs">Below ₹25 Lakhs</option>
+                <option value="₹25–50 Lakhs">₹25–50 Lakhs</option>
+                <option value="₹50 Lakhs–₹1 Crore">₹50 Lakhs–₹1 Crore</option>
+                <option value="₹1 Crore+">₹1 Crore+</option>
+                <option value="Not Decided Yet">Not Decided Yet</option>
+              </select>
+            </label>
+
+            <label class="full">Tell Us About Your Project
+              <textarea id="message" placeholder="Briefly describe your project, size, requirements..."></textarea>
+            </label>
           </div>
-          <button class="btn btn-gold" type="submit">SEND ENQUIRY ON WHATSAPP <svg class="icon-svg arrow-icon"
-              aria-hidden="true">
+          <button class="btn btn-gold form-submit-btn" type="submit">
+            GET A FREE CONSULTATION
+            <svg class="icon-svg arrow-icon" aria-hidden="true">
               <use href="#icon-arrow"></use>
-            </svg></button>
+            </svg>
+          </button>
+          <p class="form-footer-note">We'll get back to you within a few hours via WhatsApp.</p>
         </form>
       </div>
     </section>
